@@ -1,9 +1,7 @@
-﻿using ActiveDirectoryManager.SystemTools;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.DirectoryServices.ActiveDirectory;
 using System.Text;
-using System.Threading.Tasks;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace ActiveDirectoryManager.Core
 {
