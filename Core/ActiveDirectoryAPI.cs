@@ -19,7 +19,7 @@ namespace ActiveDirectoryManager.Core
             catch (ActiveDirectoryObjectNotFoundException)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Exception thrown: Check system join status or network connectivity to domain controller(s)");
+                Console.WriteLine("Exception thrown: Could not find an available domain. Check join status or network settings");
                 Console.ForegroundColor = ConsoleColor.White;
                 return null;
             }
