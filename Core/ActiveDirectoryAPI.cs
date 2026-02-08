@@ -9,6 +9,7 @@ namespace ActiveDirectoryManager.Core
     {
         public static Domain TryGetDomain()
         {
+            // Attempt to retrieve current domain credentials
             try
             {
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -16,10 +17,11 @@ namespace ActiveDirectoryManager.Core
                 Console.ForegroundColor = ConsoleColor.White;
                 return Domain.GetCurrentDomain();
             }
+            // Exception thrown if an Active Directory object could not be constructed/located
             catch (ActiveDirectoryObjectNotFoundException)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Exception thrown: Could not find an available domain. Check join status or network settings");
+                Console.WriteLine("Exception thrown: Could not find an available domain. Check join status or network settings and try again");
                 Console.ForegroundColor = ConsoleColor.White;
                 return null;
             }
