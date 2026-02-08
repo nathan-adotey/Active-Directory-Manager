@@ -41,7 +41,7 @@ namespace ActiveDirectoryManager.SystemTools
         // ASYNC task ping host
         public static async Task<bool> PingHostAsync(string host)
         {
-            using Ping ping = new();  // Defactor once reference is out of scope
+            using Ping ping = new();  // Defactor once the reference is out of scope
             PingReply reply = await ping.SendPingAsync(host, 3000);
             try
             {
